@@ -15,7 +15,7 @@ int main()
             semEspaco += c;
     } 
     
- // criar invertida 
+
   for(int i = semEspaco.size() - 1;i >= 0; --i)
    invertida += semEspaco[i];
    
