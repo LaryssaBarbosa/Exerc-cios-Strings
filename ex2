@@ -1,0 +1,30 @@
+
+//ex2
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string mensagem,semEspaco, invertida;
+    std::cout<<"Digite uma mensagem: ";
+        getline(cin, mensagem);
+        
+          for (char c : mensagem) {
+        if (c != ' ')
+            semEspaco += c;
+    } 
+    
+ // criar invertida 
+  for(int i = semEspaco.size() - 1;i >= 0; --i)
+   invertida += semEspaco[i];
+   
+    if (semEspaco.compare(invertida) == 0)
+        cout << "É um palíndromo!" << endl;
+    else
+        cout << "Não é um palíndromo." << endl;
+
+    return 0;
+
+
+}
