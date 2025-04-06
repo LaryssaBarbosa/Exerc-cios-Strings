@@ -1,0 +1,25 @@
+// ex3
+#include <iostream>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string nome;
+    cout << "Digite um nome completo: ";
+    getline(cin, nome);
+
+    
+    size_t pos = nome.find_last_of(' ');
+
+    if (pos != string::npos) {
+        string ultimo = nome.substr(pos + 1);   
+        string resto = nome.substr(0, pos);    
+
+        cout << ultimo << ", " << resto << endl;
+    } else {
+        cout << "Nome muito curto!" << endl;
+    }
+
+    return 0;
+}
